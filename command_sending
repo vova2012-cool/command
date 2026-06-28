@@ -1,1 +1,1 @@
-start "" cmd && echo ты лох
+powershell -Command "Add-Type -AssemblyName System.Windows.Forms; $f = New-Object System.Windows.Forms.Form; $f.Text = 'Catch Me'; $f.Width = 300; $f.Height = 300; $f.WindowState = 'Normal'; $f.Show(); $scr = [System.Windows.Forms.Screen]::PrimaryScreen.WorkingArea; while($true) { $f.Location = New-Object System.Drawing.Point((Get-Random -Max ($scr.Width - 300)), (Get-Random -Max ($scr.Height - 300))); [System.Windows.Forms.Application]::DoEvents(); Start-Sleep -Milliseconds 100 }"
